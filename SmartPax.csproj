@@ -173,6 +173,7 @@
     </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\RoleManagementController.cs" />
     <Compile Include="FTPConfig.cs">
       <DependentUpon>Smartpax.tt</DependentUpon>
     </Compile>
@@ -182,6 +183,7 @@
     <Compile Include="menuStructure.cs">
       <DependentUpon>Smartpax.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\RoleModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Package.cs">
       <DependentUpon>Smartpax.tt</DependentUpon>
@@ -252,9 +254,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <EmbeddedResource Include="Views\Login\Login.cshtml" />
     <EntityDeploy Include="Smartpax.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -263,6 +262,7 @@
     <Content Include="Smartpax.edmx.diagram">
       <DependentUpon>Smartpax.edmx</DependentUpon>
     </Content>
+    <EmbeddedResource Include="Views\RoleManagement\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

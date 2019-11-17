@@ -1,5 +1,4 @@
-﻿using SmartPax.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,54 +6,27 @@ using System.Web.Mvc;
 
 namespace SmartPax.Controllers
 {
-    public class LoginController : Controller
+    public class RoleManagementController : Controller
     {
-        // GET: Login
-        public ActionResult Login()
+        // GET: RoleManagement
+        public ActionResult Index()
         {
             return View();
         }
 
-
-        // GET: Login/Details/5
+        // GET: RoleManagement/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Login/Create
+        // GET: RoleManagement/Create
         public ActionResult Create()
         {
             return View();
         }
 
-
-        [HttpPost]
-        public ActionResult Login(LoginModel model)
-        {
-            SmartPaxEntities cbe = new SmartPaxEntities();
-            var s = cbe.Viax_Login(model.UserName, model.Password);
-
-          
-            if (s != null )
-            {
-                
-                return View("/RoleManagement/Create");
-            }
-            else if (s == null)
-
-            {
-                ViewBag.NotValidUser = model.UserName;
-
-            }
-            else
-            {
-               // ViewBag.Failedcount = item;
-            }
-            //wayne
-            return View("RoleManagement/Create");
-        }
-        // POST: Login/Create
+        // POST: RoleManagement/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -70,13 +42,13 @@ namespace SmartPax.Controllers
             }
         }
 
-        // GET: Login/Edit/5
+        // GET: RoleManagement/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Login/Edit/5
+        // POST: RoleManagement/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -92,13 +64,13 @@ namespace SmartPax.Controllers
             }
         }
 
-        // GET: Login/Delete/5
+        // GET: RoleManagement/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Login/Delete/5
+        // POST: RoleManagement/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
